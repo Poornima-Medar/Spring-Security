@@ -1,0 +1,24 @@
+2024-08-06T22:03:56.700+05:30  INFO 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.Application.ApplicationTests   : Starting ApplicationTests using Java 22.0.1 with PID 4908 (started by Prasad M in C:\Users\Prasad M\Desktop\Spring Boot\Spring-Boot-Application)
+2024-08-06T22:03:56.706+05:30  INFO 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.Application.ApplicationTests   : No active profile set, falling back to 1 default profile: "default"
+2024-08-06T22:03:57.878+05:30  INFO 4908 --- [Spring-Boot-Application] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06T22:03:57.987+05:30  INFO 4908 --- [Spring-Boot-Application] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 1 JPA repository interface.
+2024-08-06T22:03:58.975+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06T22:03:59.117+05:30  INFO 4908 --- [Spring-Boot-Application] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06T22:03:59.195+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-06T22:03:59.336+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.h.e.boot.internal.EnversServiceImpl    : Envers integration enabled? : true
+2024-08-06T22:03:59.680+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06T22:03:59.711+05:30  INFO 4908 --- [Spring-Boot-Application] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-06T22:03:59.977+05:30  INFO 4908 --- [Spring-Boot-Application] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c5ae8fd
+2024-08-06T22:03:59.977+05:30  INFO 4908 --- [Spring-Boot-Application] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-06T22:04:00.335+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.h.e.c.i.m.AuditMetadataGenerator       : Adding properties for entity: com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.PostEntity
+2024-08-06T22:04:01.078+05:30 ERROR 4908 --- [Spring-Boot-Application] [main] o.h.metamodel.internal.MetadataContext   : HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2024-08-06T22:04:01.094+05:30  INFO 4908 --- [Spring-Boot-Application] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06T22:04:01.316+05:30  INFO 4908 --- [Spring-Boot-Application] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06T22:04:02.130+05:30  WARN 4908 --- [Spring-Boot-Application] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06T22:04:02.631+05:30  INFO 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.Application.ApplicationTests   : Started ApplicationTests in 6.485 seconds (process running for 7.999)
+2024-08-06T22:04:03.264+05:30 DEBUG 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.A.O.c.Impl.EmployeeClientImpl  : creating new employee using createNewEmployee Method
+2024-08-06T22:04:03.467+05:30 DEBUG 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.A.O.c.Impl.EmployeeClientImpl  : Successfully inserted new employee data
+2024-08-06T22:04:03.467+05:30 TRACE 4908 --- [Spring-Boot-Application] [main] c.S.I.S.B.A.O.c.Impl.EmployeeClientImpl  : inserted new employee data createNewEmployee : EmployeeDTO(id=4, name=Poornima, age=20, email=poornima@gmail.com, location=Gadag, dateOfJoining=2000-02-12, isActive=true, role=ADMIN, salary=2000.0)
+2024-08-06T22:04:03.498+05:30  INFO 4908 --- [Spring-Boot-Application] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06T22:04:03.498+05:30  INFO 4908 --- [Spring-Boot-Application] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-06T22:04:03.517+05:30  INFO 4908 --- [Spring-Boot-Application] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -1,0 +1,24 @@
+2024-08-06 22:22:13 [main] INFO  c.S.I.S.B.A.ApplicationTests - Starting ApplicationTests using Java 22.0.1 with PID 17704 (started by Prasad M in C:\Users\Prasad M\Desktop\Spring Boot\Spring-Boot-Application)
+2024-08-06 22:22:13 [main] INFO  c.S.I.S.B.A.ApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2024-08-06 22:22:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-06 22:22:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2024-08-06 22:22:15 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-06 22:22:15 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-06 22:22:15 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-08-06 22:22:16 [main] INFO  o.h.e.b.internal.EnversServiceImpl - Envers integration enabled? : true
+2024-08-06 22:22:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-06 22:22:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-08-06 22:22:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d9bb69b
+2024-08-06 22:22:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-08-06 22:22:16 [main] INFO  o.h.e.c.i.m.AuditMetadataGenerator - Adding properties for entity: com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.PostEntity
+2024-08-06 22:22:17 [main] ERROR o.h.m.internal.MetadataContext - HHH015007: Illegal argument on static metamodel field injection : org.hibernate.envers.DefaultRevisionEntity_#class_; expected type :  org.hibernate.metamodel.model.domain.internal.EntityTypeImpl; encountered type : jakarta.persistence.metamodel.MappedSuperclassType
+2024-08-06 22:22:17 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-06 22:22:17 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 22:22:18 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-06 22:22:19 [main] INFO  c.S.I.S.B.A.ApplicationTests - Started ApplicationTests in 5.986 seconds (process running for 7.322)
+2024-08-06 22:22:19 [main] DEBUG c.S.I.S.B.A.O.c.I.EmployeeClientImpl - creating new employee using createNewEmployee Method
+2024-08-06 22:22:19 [main] DEBUG c.S.I.S.B.A.O.c.I.EmployeeClientImpl - Successfully inserted new employee data
+2024-08-06 22:22:19 [main] TRACE c.S.I.S.B.A.O.c.I.EmployeeClientImpl - inserted new employee data createNewEmployee : EmployeeDTO(id=5, name=Poornima, age=20, email=poornima@gmail.com, location=Gadag, dateOfJoining=2000-02-12, isActive=true, role=ADMIN, salary=2000.0)
+2024-08-06 22:22:19 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-06 22:22:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-08-06 22:22:19 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
