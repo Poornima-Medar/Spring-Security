@@ -2,6 +2,10 @@ package com.SpringBoot.IndustryStandards.Spring.Boot.Application;
 
 import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.client.EmployeeClient;
 import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.dto.EmployeeDTO;
+import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.UserEntity;
+import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.enums.Permissions;
+import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.enums.Role;
+import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.services.JwtService;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -11,6 +15,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -18,6 +23,23 @@ class ApplicationTests {
 
 	@Autowired
 	private EmployeeClient employeeClient;
+
+	@Autowired
+	private JwtService jwtService;
+
+
+	@Test
+	void verifyToken(){
+		UserEntity user = new UserEntity(1L,"poornima@gmail.com","1234","poornima", Set.of(Role.valueOf("ADMIN")));
+
+		String token = jwtService.generateAccessToken(user);
+
+		System.out.println(token);
+
+		Long id = jwtService.getUserIdFromToken(token);
+
+		System.out.println(id);
+	}
 
 	@Test
 	@Order(5)

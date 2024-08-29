@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
+import org.hibernate.envers.RelationTargetAuditMode;
 
 
 @Getter
@@ -24,5 +26,9 @@ public class PostEntity extends AuditEntity{
     private String title;
 
     private String description;
+
+    @ManyToOne
+    @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
+    private UserEntity author;
 
 }

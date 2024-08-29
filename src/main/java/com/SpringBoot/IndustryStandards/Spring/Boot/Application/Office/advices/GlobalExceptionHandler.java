@@ -7,6 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import java.nio.file.AccessDeniedException;
+import java.rmi.AccessException;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -14,5 +17,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiError> resourceNotFoundHandler(ResourceNotFoundException exception){
         ApiError apiError = new ApiError(exception.getLocalizedMessage(), HttpStatus.NOT_FOUND);
         return new ResponseEntity<>(apiError,HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(AccessDeniedException.class)
+    public ResponseEntity<ApiError> handleAccessDeniedException(AccessDeniedException e){
+        ApiError apiError = new ApiError(e.getLocalizedMessage(), HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(apiError,HttpStatus.FORBIDDEN);
     }
 }
