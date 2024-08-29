@@ -1,6 +1,7 @@
 package com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.dto;
 
 
+import com.SpringBoot.IndustryStandards.Spring.Boot.Application.Office.entities.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,4 +18,6 @@ public class PostDTO {
     private String title;
 
     private String description;
+
+    private UserDTO author;
 }
